@@ -1,0 +1,160 @@
+{
+  "entities": {
+    "PortfolioData": {
+      "title": "PortfolioData",
+      "description": "Entire editable portfolio content for Ritesh Shinde, allowing CMS updates via an elegant Admin dashboard",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Document ID"
+        },
+        "heroName": {
+          "type": "string",
+          "description": "Name displayed in hero section"
+        },
+        "heroTitle1": {
+          "type": "string",
+          "description": "Line 1 of large hero titles"
+        },
+        "heroTitle2": {
+          "type": "string",
+          "description": "Line 2 of large hero titles"
+        },
+        "heroSubtitles": {
+          "type": "array",
+          "description": "Array of bullet text subtitles (e.g. Embedded Systems Developer, Electronics Engineer)"
+        },
+        "introText": {
+          "type": "string",
+          "description": "Right-hand brief intro text on hero"
+        },
+        "statCgpa": {
+          "type": "string",
+          "description": "CGPA statistic"
+        },
+        "statGerman": {
+          "type": "string",
+          "description": "German level statistic"
+        },
+        "statProjectsCount": {
+          "type": "string",
+          "description": "Count of projects statistic"
+        },
+        "statOther": {
+          "type": "string",
+          "description": "Other startup or professional statistic"
+        },
+        "aboutStory": {
+          "type": "string",
+          "description": "Paragraph of the main story"
+        },
+        "aboutECE": {
+          "type": "string",
+          "description": "ECE detail paragraph"
+        },
+        "aboutGoal": {
+          "type": "string",
+          "description": "Goals details paragraph"
+        },
+        "skillsList": {
+          "type": "array",
+          "description": "List of categories and corresponding skills"
+        },
+        "experienceList": {
+          "type": "array",
+          "description": "Experience timeline items"
+        },
+        "projectsList": {
+          "type": "array",
+          "description": "Full project items showcased in grid"
+        },
+        "educationList": {
+          "type": "array",
+          "description": "Education details list"
+        },
+        "certificationsList": {
+          "type": "array",
+          "description": "Certifications content for continuous slide scroll"
+        },
+        "contactEmail": {
+          "type": "string",
+          "description": "Primary contact email address"
+        },
+        "socialLinkedIn": {
+          "type": "string",
+          "description": "LinkedIn profile link"
+        },
+        "socialGitHub": {
+          "type": "string",
+          "description": "GitHub profile link"
+        },
+        "socialInstagram": {
+          "type": "string",
+          "description": "Instagram profile link"
+        },
+        "githubUsername": {
+          "type": "string",
+          "description": "GitHub username to pull real repository telemetry or render mock grid if API limits are hit"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Timestamp of last edit"
+        }
+      },
+      "required": [
+        "heroName",
+        "introText",
+        "contactEmail"
+      ]
+    },
+    "ContactMessage": {
+      "title": "ContactMessage",
+      "description": "User inbound messages sent from the portfolio contact form",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Message id"
+        },
+        "name": {
+          "type": "string",
+          "description": "Sender name"
+        },
+        "email": {
+          "type": "string",
+          "description": "Sender email"
+        },
+        "subject": {
+          "type": "string",
+          "description": "Subject of the message"
+        },
+        "message": {
+          "type": "string",
+          "description": "Details of the message"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "When message was sent"
+        }
+      },
+      "required": [
+        "name",
+        "email",
+        "message"
+      ]
+    }
+  },
+  "firestore": {
+    "portfolio/current": {
+      "schema": "PortfolioData",
+      "description": "The current live portfolio contents, editable by the owner"
+    },
+    "messages/{messageId}": {
+      "schema": "ContactMessage",
+      "description": "Messages sent by students, recruiters, or other visitors"
+    }
+  }
+}
