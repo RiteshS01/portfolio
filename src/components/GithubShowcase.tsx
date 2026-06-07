@@ -150,7 +150,7 @@ export const GithubShowcase: React.FC = () => {
         <div className="border-b border-white/5 pb-8 flex flex-col md:flex-row md:items-end justify-between gap-4">
           <div>
             <span className="font-mono text-xs uppercase tracking-widest text-neutral-500 block mb-3">07 // REAL-TIME TELEMETRY</span>
-            <h2 className="font-sans font-black text-4xl md:text-5xl lg:text-6xl tracking-tighter text-white uppercase leading-none">
+            <h2 className="font-sans font-black text-4xl md:text-5xl lg:text-6xl tracking-tighter text-purple-400 uppercase leading-none">
               GitHub Terminal_
             </h2>
           </div>
@@ -190,10 +190,10 @@ export const GithubShowcase: React.FC = () => {
         <div className="p-6 rounded-3xl border border-white/5 bg-neutral-900/10 backdrop-blur-sm space-y-4">
           <div className="flex items-center justify-between border-b border-white/5 pb-4">
             <div className="flex items-center gap-2">
-              <Github className="h-4 w-4" />
-              <span className="font-sans font-bold text-sm text-white">git_contributions_heatmap</span>
+              <Github className="h-4 w-4 text-purple-400" />
+              <span className="font-sans font-bold text-sm text-purple-400">git_contributions_heatmap</span>
             </div>
-            <span className="font-mono text-[9px] text-neutral-500 uppercase tracking-widest bg-neutral-950 px-2 py-0.5 rounded">
+            <span className="font-mono text-[9px] text-purple-400 uppercase tracking-widest bg-purple-950/40 border border-purple-900/40 px-2 py-0.5 rounded">
               USER: {portfolioData.githubUsername || 'RiteshS01'}
             </span>
           </div>
@@ -210,15 +210,15 @@ export const GithubShowcase: React.FC = () => {
                     // map levels to monochrome shades
                     const colorClasses = [
                       'bg-neutral-900/80', // 0 commits
-                      'bg-neutral-800',    // Low
-                      'bg-neutral-600',    // Mid
-                      'bg-neutral-400',    // Lighter
-                      'bg-white'           // Heavy density
+                      'bg-purple-950/30 border border-purple-900/20',  // Low
+                      'bg-purple-800/40',  // Mid
+                      'bg-purple-600/60',  // Lighter
+                      'bg-purple-400/90 shadow-[0_0_6px_rgba(168,85,247,0.6)]' // Heavy density
                     ];
                     return (
                       <div
                         key={cIdx}
-                        className={`h-3 w-3 rounded-sm ${colorClasses[cellLevel]} hover:border hover:border-neutral-300 transition-all duration-100`}
+                        className={`h-3 w-3 rounded-sm ${colorClasses[cellLevel]} hover:border hover:border-purple-300 transition-all duration-100`}
                         title={`Activity weight: ${cellLevel}`}
                       />
                     );
@@ -234,10 +234,10 @@ export const GithubShowcase: React.FC = () => {
             <div className="flex items-center gap-1.5">
               <span>Less</span>
               <div className="h-2 w-2 rounded-sm bg-neutral-900/80" />
-              <div className="h-2 w-2 rounded-sm bg-neutral-800" />
-              <div className="h-2 w-2 rounded-sm bg-neutral-600" />
-              <div className="h-2 w-2 rounded-sm bg-neutral-400" />
-              <div className="h-2 w-2 rounded-sm bg-white" />
+              <div className="h-2 w-2 rounded-sm bg-purple-950/30 border border-purple-900/20" />
+              <div className="h-2 w-2 rounded-sm bg-purple-800/40" />
+              <div className="h-2 w-2 rounded-sm bg-purple-600/60" />
+              <div className="h-2 w-2 rounded-sm bg-purple-400" />
               <span>More</span>
             </div>
           </div>
@@ -246,11 +246,11 @@ export const GithubShowcase: React.FC = () => {
         {/* Top Repositories list */}
         <div className="space-y-6">
           <div className="flex items-center justify-between">
-            <h3 className="font-sans font-bold text-lg uppercase tracking-wider text-white">
+            <h3 className="font-sans font-bold text-lg uppercase tracking-wider text-purple-400">
               Repository Registry
             </h3>
             {failed && (
-              <span className="font-mono text-[9px] text-neutral-500 uppercase tracking-widest italic">
+              <span className="font-mono text-[9px] text-purple-400/80 uppercase tracking-widest italic">
                 (API Quota Exceeded • Loading Simulated Shell)
               </span>
             )}
@@ -263,18 +263,18 @@ export const GithubShowcase: React.FC = () => {
                 href={repo.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group p-5 rounded-2xl border border-white/5 bg-neutral-950/40 hover:border-neutral-500 hover:shadow-xl transition-all duration-300 flex flex-col justify-between space-y-6"
+                className="group p-5 rounded-2xl border border-white/5 bg-neutral-950/40 hover:border-purple-500/45 hover:shadow-[0_0_20px_rgba(168,85,247,0.15)] hover:bg-neutral-900/30 transition-all duration-300 flex flex-col justify-between space-y-6"
                 id={`repo-card-${idx}`}
               >
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
-                    <Code className="h-4 w-4 text-neutral-500" />
-                    <span className="font-mono text-[9px] text-neutral-600 uppercase font-bold">
+                    <Code className="h-4 w-4 text-purple-500" />
+                    <span className="font-mono text-[9px] text-purple-400/70 uppercase font-bold">
                       ACTIVE_BRANCH
                     </span>
                   </div>
                   <div className="space-y-1">
-                    <h4 className="font-sans font-bold text-base text-white group-hover:text-neutral-400 transition-colors truncate">
+                    <h4 className="font-sans font-bold text-base text-purple-300 group-hover:text-purple-400 transition-colors truncate">
                       {repo.name}
                     </h4>
                     <p className="font-sans text-xs font-light text-neutral-400 line-clamp-2 h-8 leading-relaxed">
@@ -284,17 +284,17 @@ export const GithubShowcase: React.FC = () => {
                 </div>
 
                 <div className="flex items-center justify-between border-t border-white/5 pt-4 font-mono text-[9px] text-neutral-500 uppercase">
-                  <span className="flex items-center gap-1 font-semibold">
-                    <span className="h-1.5 w-1.5 rounded-full bg-neutral-350 bg-white" />
+                  <span className="flex items-center gap-1 font-semibold text-purple-300">
+                    <span className="h-1.5 w-1.5 rounded-full bg-purple-400 shadow-[0_0_6px_rgba(168,85,247,0.8)]" />
                     {repo.language}
                   </span>
                   <div className="flex items-center gap-3">
                     <span className="flex items-center gap-0.5">
-                      <Star className="h-3 w-3 inline text-neutral-400" />
+                      <Star className="h-3 w-3 inline text-purple-400" />
                       {repo.stars}
                     </span>
                     <span className="flex items-center gap-0.5">
-                      <GitFork className="h-3 w-3 inline text-neutral-400" />
+                      <GitFork className="h-3 w-3 inline text-purple-400" />
                       {repo.forks}
                     </span>
                   </div>

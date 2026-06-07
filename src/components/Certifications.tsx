@@ -41,7 +41,7 @@ export const Certifications: React.FC = () => {
         <div className="border-b border-white/5 pb-8 flex flex-col md:flex-row md:items-end justify-between gap-4">
           <div>
             <span className="font-mono text-xs uppercase tracking-widest text-neutral-500 block mb-3">06 // PROFESSIONAL BADGES</span>
-            <h2 className="font-sans font-black text-4xl md:text-5xl lg:text-6xl tracking-tighter text-white uppercase leading-none">
+            <h2 className="font-sans font-black text-4xl md:text-5xl lg:text-6xl tracking-tighter text-purple-400 uppercase leading-none">
               Certifications_
             </h2>
           </div>
@@ -49,7 +49,7 @@ export const Certifications: React.FC = () => {
           <div className="flex items-center gap-3">
             <button 
               onClick={() => scroll('left')}
-              className="p-3 border border-neutral-800 hover:border-neutral-500 text-neutral-400 hover:text-white rounded-full bg-neutral-950 transition-all duration-300 shadow"
+              className="p-3 border border-neutral-800 hover:border-purple-500 hover:bg-purple-950/20 text-neutral-400 hover:text-purple-300 rounded-full bg-neutral-950 transition-all duration-300 shadow"
               aria-label="Scroll left"
               id="cert-scroll-left"
             >
@@ -57,7 +57,7 @@ export const Certifications: React.FC = () => {
             </button>
             <button 
               onClick={() => scroll('right')}
-              className="p-3 border border-neutral-800 hover:border-neutral-500 text-neutral-400 hover:text-white rounded-full bg-neutral-950 transition-all duration-300 shadow"
+              className="p-3 border border-neutral-800 hover:border-purple-500 hover:bg-purple-950/20 text-neutral-400 hover:text-purple-300 rounded-full bg-neutral-950 transition-all duration-300 shadow"
               aria-label="Scroll right"
               id="cert-scroll-right"
             >
@@ -75,10 +75,10 @@ export const Certifications: React.FC = () => {
           {portfolioData.certificationsList.map((cert) => (
             <div
               key={cert.id}
-              className="min-w-[280px] sm:min-w-[340px] max-w-[340px] snap-start snap-always rounded-2xl border border-white/5 bg-neutral-900/25 p-6 hover:border-neutral-500 hover:bg-neutral-900/40 transition-all duration-300 flex flex-col justify-between shadow-lg relative group"
+              className="min-w-[280px] sm:min-w-[340px] max-w-[340px] snap-start snap-always rounded-2xl border border-white/5 bg-neutral-900/25 p-6 hover:border-purple-500/40 hover:bg-neutral-900/40 hover:shadow-[0_0_20px_rgba(168,85,247,0.15)] transition-all duration-300 flex flex-col justify-between shadow-lg relative group"
             >
               {/* Graphic watermark background */}
-              <div className="absolute top-4 right-4 text-neutral-900 group-hover:text-neutral-800 transition-colors pointer-events-none z-0">
+              <div className="absolute top-4 right-4 text-neutral-900/60 group-hover:text-purple-950/40 transition-colors pointer-events-none z-0">
                 <Award className="h-16 w-16" strokeWidth={0.5} />
               </div>
 
@@ -90,7 +90,7 @@ export const Certifications: React.FC = () => {
                 </div>
 
                 <div className="space-y-2">
-                  <h3 className="font-sans font-black text-lg tracking-tight text-white uppercase line-clamp-2">
+                  <h3 className="font-sans font-black text-lg tracking-tight text-purple-300 group-hover:text-purple-400 transition-colors uppercase line-clamp-2">
                     {cert.title}
                   </h3>
                   <div className="space-y-0.5">
@@ -110,7 +110,7 @@ export const Certifications: React.FC = () => {
                     href={cert.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 text-xs font-mono text-neutral-400 hover:text-white transition-colors uppercase tracking-widest"
+                    className="inline-flex items-center gap-1 text-xs font-mono text-purple-300 hover:text-purple-400 transition-colors uppercase tracking-widest"
                     id={`cert-link-${cert.id}`}
                   >
                     View Credential

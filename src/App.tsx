@@ -16,6 +16,7 @@ import { Education } from './components/Education';
 import { Certifications } from './components/Certifications';
 import { GithubShowcase } from './components/GithubShowcase';
 import { Achievements } from './components/Achievements';
+import { ResumeViewer } from './components/ResumeViewer';
 import { Contact } from './components/Contact';
 import { AdminCMS } from './components/AdminCMS';
 
@@ -64,8 +65,13 @@ export default function App() {
 
   return (
     <PortfolioProvider>
-      <div id="home" className="min-h-screen bg-black text-white relative overflow-x-hidden selection:bg-white selection:text-black">
+      <div id="home" className="min-h-screen bg-black text-white relative overflow-x-hidden selection:bg-purple-600 selection:text-white">
         
+        {/* Floating Ambient Glows */}
+        <div className="absolute top-[10%] left-[-10%] w-[500px] h-[500px] rounded-full bg-purple-900/15 blur-[120px] pointer-events-none animate-float z-0" />
+        <div className="absolute top-[50%] right-[-10%] w-[450px] h-[450px] rounded-full bg-violet-900/15 blur-[130px] pointer-events-none animate-float-reverse z-0" />
+        <div className="absolute bottom-[10%] left-[5%] w-[400px] h-[400px] rounded-full bg-fuchsia-900/10 blur-[110px] pointer-events-none animate-pulse-glow z-0" />
+
         {/* BOOT PRE-LOADER CONTAINER */}
         <AnimatePresence>
           {loading && (
@@ -88,8 +94,8 @@ export default function App() {
                 
                 {/* Visual loading ring */}
                 <div className="flex items-center gap-3">
-                  <div className="h-4 w-4 border border-t-transparent border-white rounded-full animate-spin" />
-                  <span className="font-mono text-xs text-white uppercase tracking-wider font-semibold">BOOT_SEQUENCE_ACTIVE</span>
+                  <div className="h-4 w-4 border border-t-transparent border-purple-500 rounded-full animate-spin" />
+                  <span className="font-mono text-xs text-purple-400 uppercase tracking-wider font-semibold">BOOT_SEQUENCE_ACTIVE</span>
                 </div>
 
                 <div className="space-y-2 border-l border-white/10 pl-4 py-1">
@@ -104,7 +110,7 @@ export default function App() {
                 {/* Progress bar */}
                 <div className="h-1 bg-neutral-900 w-full rounded overflow-hidden">
                   <motion.div 
-                    className="h-full bg-white" 
+                    className="h-full bg-gradient-to-r from-purple-500 to-indigo-500" 
                     initial={{ width: "0%" }}
                     animate={{ width: `${((bootTextIdx + 1) / bootLogs.length) * 100}%` }}
                     transition={{ duration: 0.2 }}
@@ -124,7 +130,7 @@ export default function App() {
         {/* Scroll Progress Line */}
         <div className="fixed top-0 left-0 right-0 h-[3px] bg-neutral-900 z-50">
           <div 
-            className="h-full bg-white transition-all duration-75"
+            className="h-full bg-gradient-to-r from-purple-500 to-indigo-500 shadow-[0_0_8px_rgba(168,85,247,0.8)] transition-all duration-75"
             style={{ width: `${scrollProgress * 100}%` }}
           />
         </div>
@@ -142,6 +148,7 @@ export default function App() {
           <Certifications />
           <GithubShowcase />
           <Achievements />
+          <ResumeViewer />
           <Contact />
         </main>
 

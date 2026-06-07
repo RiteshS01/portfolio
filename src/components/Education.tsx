@@ -26,7 +26,7 @@ export const Education: React.FC = () => {
         <div className="border-b border-white/5 pb-8 mb-16 flex flex-col md:flex-row md:items-end justify-between gap-4">
           <div>
             <span className="font-mono text-xs uppercase tracking-widest text-neutral-500 block mb-3">05 // EDUCATION REGISTRY</span>
-            <h2 className="font-sans font-black text-4xl md:text-5xl lg:text-6xl tracking-tighter text-white uppercase leading-none">
+            <h2 className="font-sans font-black text-4xl md:text-5xl lg:text-6xl tracking-tighter text-purple-400 uppercase leading-none">
               Education_
             </h2>
           </div>
@@ -39,7 +39,7 @@ export const Education: React.FC = () => {
         {portfolioData.educationList.map((edu, idx) => (
           <motion.div
             key={edu.id}
-            className="p-8 rounded-3xl border border-white/5 bg-neutral-900/10 backdrop-blur-sm hover:border-neutral-500 transition-all duration-300 shadow-2xl relative"
+            className="p-8 rounded-3xl border border-white/5 bg-neutral-900/10 backdrop-blur-sm hover:border-purple-500/40 hover:shadow-[0_0_20px_rgba(168,85,247,0.15)] transition-all duration-300 shadow-2xl relative group"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -56,7 +56,7 @@ export const Education: React.FC = () => {
                     <span className="font-mono text-xs text-neutral-500 uppercase tracking-widest">
                       {edu.period}
                     </span>
-                    <h3 className="font-sans font-black text-2xl md:text-3xl text-white uppercase tracking-tight">
+                    <h3 className="font-sans font-black text-2xl md:text-3xl text-purple-300 uppercase tracking-tight group-hover:text-purple-400 transition-colors">
                       {edu.title}
                     </h3>
                   </div>
@@ -104,13 +104,13 @@ export const Education: React.FC = () => {
               {/* Large Dynamic Grade / CGPA badge */}
               <div className="lg:col-span-4 flex items-center justify-center lg:border-l lg:border-white/5 py-8">
                 <div className="text-center space-y-3 relative group">
-                  <div className="absolute inset-0 bg-neutral-200/5 filter blur-xl rounded-full scale-75 group-hover:scale-95 transition-transform duration-300" />
+                  <div className="absolute inset-0 bg-purple-500/5 filter blur-xl rounded-full scale-75 group-hover:scale-95 transition-transform duration-300" />
                   
-                  <div className="h-36 w-36 rounded-full border border-neutral-800 bg-neutral-950 flex flex-col justify-center items-center shadow-inner relative z-10">
+                  <div className="h-36 w-36 rounded-full border border-neutral-800 group-hover:border-purple-500 bg-neutral-950 flex flex-col justify-center items-center shadow-inner relative z-10 transition-all duration-300">
                     <span className="font-mono text-[10px] text-neutral-500 uppercase tracking-widest">
                       {edu.id === 'edu1' ? "CGPA score" : "Percentage"}
                     </span>
-                    <span className="font-sans font-black text-4xl text-white tracking-tighter">
+                    <span className="font-sans font-black text-4xl text-purple-300 group-hover:text-purple-400 transition-colors tracking-tighter">
                       {edu.id === 'edu1' ? "8.31" : edu.id === 'edu2' ? "62%" : "83%"}
                     </span>
                     <span className="font-mono text-[9px] text-neutral-500 uppercase font-bold mt-1">
@@ -119,7 +119,7 @@ export const Education: React.FC = () => {
                   </div>
                   
                   <div className="space-y-1 relative z-10">
-                    <p className="font-sans font-black text-sm uppercase tracking-wider text-white">
+                    <p className="font-sans font-black text-sm uppercase tracking-wider text-purple-300 group-hover:text-purple-400 transition-colors">
                       {edu.id === 'edu1' ? "First Class with Distinction" : edu.id === 'edu2' ? "Higher Secondary" : "Secondary School"}
                     </p>
                     <p className="font-mono text-[9px] uppercase tracking-widest text-neutral-500">

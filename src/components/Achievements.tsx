@@ -69,7 +69,7 @@ export const Achievements: React.FC = () => {
         <div className="border-b border-white/5 pb-8 flex flex-col md:flex-row md:items-end justify-between gap-4">
           <div>
             <span className="font-mono text-xs uppercase tracking-widest text-neutral-500 block mb-3">08 // RECOGNITIONS INDEX</span>
-            <h2 className="font-sans font-black text-4xl md:text-5xl lg:text-6xl tracking-tighter text-white uppercase leading-none">
+            <h2 className="font-sans font-black text-4xl md:text-5xl lg:text-6xl tracking-tighter text-purple-400 uppercase leading-none">
               Achievements_
             </h2>
           </div>
@@ -83,19 +83,19 @@ export const Achievements: React.FC = () => {
           
           {/* Card 1: CGPA */}
           <motion.div
-            className="p-8 border border-white/5 bg-neutral-900/15 backdrop-blur-sm rounded-2xl hover:border-neutral-400 transition-colors duration-300 flex flex-col justify-between h-[220px]"
+            className="p-8 border border-white/5 bg-neutral-900/15 backdrop-blur-sm rounded-2xl hover:border-purple-500/40 hover:bg-neutral-900/30 hover:shadow-[0_0_20px_rgba(168,85,247,0.15)] transition-all duration-300 flex flex-col justify-between h-[220px] group"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0 }}
           >
             <div className="flex items-center justify-between">
-              <Trophy className="h-5 w-5 text-neutral-400" />
+              <Trophy className="h-5 w-5 text-neutral-400 group-hover:text-purple-400 transition-colors" />
               <span className="font-mono text-[9px] text-neutral-600">RECORD_01</span>
             </div>
             
             <div className="space-y-1">
-              <span className="font-sans font-black text-5xl tracking-tight text-white block">
+              <span className="font-sans font-black text-5xl tracking-tight text-purple-300 group-hover:text-purple-400 transition-colors block">
                 <AnimatedCounter target={8.3} decimals={1} suffix=" CGPA" />
               </span>
               <span className="font-sans font-bold text-sm text-neutral-350">Academic Standard</span>
@@ -108,19 +108,19 @@ export const Achievements: React.FC = () => {
 
           {/* Card 2: Current Semester SGPA */}
           <motion.div
-            className="p-8 border border-white/5 bg-neutral-900/15 backdrop-blur-sm rounded-2xl hover:border-neutral-400 transition-colors duration-300 flex flex-col justify-between h-[220px]"
+            className="p-8 border border-white/5 bg-neutral-900/15 backdrop-blur-sm rounded-2xl hover:border-purple-500/40 hover:bg-neutral-900/30 hover:shadow-[0_0_20px_rgba(168,85,247,0.15)] transition-all duration-300 flex flex-col justify-between h-[220px] group"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
             <div className="flex items-center justify-between">
-              <BookOpen className="h-5 w-5 text-neutral-400" />
+              <BookOpen className="h-5 w-5 text-neutral-400 group-hover:text-purple-400 transition-colors" />
               <span className="font-mono text-[9px] text-neutral-600">RECORD_02</span>
             </div>
             
             <div className="space-y-1">
-              <span className="font-sans font-black text-5xl tracking-tight text-white block">
+              <span className="font-sans font-black text-5xl tracking-tight text-purple-300 group-hover:text-purple-400 transition-colors block">
                 <AnimatedCounter target={8.69} decimals={2} suffix=" SGPA" />
               </span>
               <span className="font-sans font-bold text-sm text-neutral-350">Current Semester</span>
@@ -133,19 +133,19 @@ export const Achievements: React.FC = () => {
 
           {/* Card 3: Academic projects */}
           <motion.div
-            className="p-8 border border-white/5 bg-neutral-900/15 backdrop-blur-sm rounded-2xl hover:border-neutral-400 transition-colors duration-300 flex flex-col justify-between h-[220px]"
+            className="p-8 border border-white/5 bg-neutral-900/15 backdrop-blur-sm rounded-2xl hover:border-purple-500/40 hover:bg-neutral-900/30 hover:shadow-[0_0_20px_rgba(168,85,247,0.15)] transition-all duration-300 flex flex-col justify-between h-[220px] group"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <div className="flex items-center justify-between">
-              <Layers className="h-5 w-5 text-neutral-400" />
+              <Layers className="h-5 w-5 text-neutral-400 group-hover:text-purple-400 transition-colors" />
               <span className="font-mono text-[9px] text-neutral-600">RECORD_03</span>
             </div>
             
             <div className="space-y-1">
-              <span className="font-sans font-black text-5xl tracking-tight text-white block">
+              <span className="font-sans font-black text-5xl tracking-tight text-purple-300 group-hover:text-purple-400 transition-colors block">
                 <AnimatedCounter target={10} suffix="+ Projects" />
               </span>
               <span className="font-sans font-bold text-sm text-neutral-350">Academic & Labs</span>
@@ -158,19 +158,19 @@ export const Achievements: React.FC = () => {
 
           {/* Card 4: EDA & Prototyping Systems */}
           <motion.div
-            className="p-8 border border-white/5 bg-neutral-900/15 backdrop-blur-sm rounded-2xl hover:border-neutral-400 transition-colors duration-300 flex flex-col justify-between h-[220px]"
+            className="p-8 border border-white/5 bg-neutral-900/15 backdrop-blur-sm rounded-2xl hover:border-purple-500/40 hover:bg-neutral-900/30 hover:shadow-[0_0_20px_rgba(168,85,247,0.15)] transition-all duration-300 flex flex-col justify-between h-[220px] group"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
             <div className="flex items-center justify-between">
-              <Star className="h-5 w-5 text-neutral-400" />
+              <Star className="h-5 w-5 text-neutral-400 group-hover:text-purple-400 transition-colors" />
               <span className="font-mono text-[9px] text-neutral-600">RECORD_04</span>
             </div>
             
             <div className="space-y-1">
-              <span className="font-sans font-black text-5xl tracking-tight text-white block">
+              <span className="font-sans font-black text-5xl tracking-tight text-purple-300 group-hover:text-purple-400 transition-colors block">
                 <AnimatedCounter target={5} suffix="+ Platforms" />
               </span>
               <span className="font-sans font-bold text-sm text-neutral-300">EDA & Prototyping</span>

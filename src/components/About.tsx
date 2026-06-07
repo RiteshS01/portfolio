@@ -7,7 +7,6 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { usePortfolio } from '../context/PortfolioContext';
 import { BookOpen, MapPin, GraduationCap, ArrowUpRight } from 'lucide-react';
-import circuitConcept from '../assets/images/circuit_concept.png';
 
 export const About: React.FC = () => {
   const { portfolioData } = usePortfolio();
@@ -55,7 +54,7 @@ export const About: React.FC = () => {
         <div className="border-b border-white/5 pb-8 mb-16 flex flex-col md:flex-row md:items-end justify-between gap-4">
           <div>
             <span className="font-mono text-xs uppercase tracking-widest text-neutral-500 block mb-3">01 // MY BACKGROUND</span>
-            <h2 className="font-sans font-black text-4xl md:text-5xl lg:text-6xl tracking-tighter text-white uppercase leading-none">
+            <h2 className="font-sans font-black text-4xl md:text-5xl lg:text-6xl tracking-tighter text-purple-400 uppercase leading-none">
               About Me_
             </h2>
           </div>
@@ -71,7 +70,7 @@ export const About: React.FC = () => {
           <div className="lg:col-span-5 relative group">
             <div className="relative aspect-square w-full rounded-2xl overflow-hidden border border-white/10 bg-neutral-900 shadow-xl transition-all duration-500 group-hover:border-neutral-500">
               <img 
-                src={circuitConcept} 
+                src="https://cdn.corenexis.com/files/c/6691754720.jpg" 
                 alt="Silicon Circuit Blueprint Illustration" 
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover opacity-75 grayscale contrast-125 transition-transform duration-500 scale-100 group-hover:scale-105"
@@ -108,10 +107,7 @@ export const About: React.FC = () => {
                 {portfolioData.aboutECE}
               </p>
 
-              <div className="p-5 border border-white/5 rounded-xl bg-neutral-900/40 font-sans font-light text-neutral-400 text-sm leading-relaxed">
-                <span className="font-semibold text-white block mb-1">Global Academic Destination:</span>
-                {portfolioData.aboutGoal}
-              </div>
+
             </div>
 
             {/* Quick credentials badges */}
@@ -142,7 +138,7 @@ export const About: React.FC = () => {
         {/* Chronological Milestones / History */}
         <div className="space-y-8 border-t border-white/5 pt-16">
           <div className="flex items-center justify-between pb-4">
-            <h3 className="font-sans font-bold text-xl uppercase tracking-wider text-white">
+            <h3 className="font-sans font-bold text-xl uppercase tracking-wider text-purple-400">
               Academic & Technical Timeline
             </h3>
             <span className="font-mono text-[10px] text-neutral-500 uppercase tracking-widest">

@@ -67,7 +67,7 @@ export const Contact: React.FC = () => {
         <div className="border-b border-white/5 pb-8 flex flex-col md:flex-row md:items-end justify-between gap-4">
           <div>
             <span className="font-mono text-xs uppercase tracking-widest text-neutral-500 block mb-3">09 // INBOUND CHANNEL</span>
-            <h2 className="font-sans font-black text-4xl md:text-5xl lg:text-6xl tracking-tighter text-white uppercase leading-none">
+            <h2 className="font-sans font-black text-4xl md:text-5xl lg:text-6xl tracking-tighter text-purple-400 uppercase leading-none">
               Contact Me_
             </h2>
           </div>
@@ -94,30 +94,30 @@ export const Contact: React.FC = () => {
             <div className="space-y-4">
               <a 
                 href={`mailto:${portfolioData.contactEmail}`}
-                className="flex items-center gap-4 p-4 border border-white/5 bg-neutral-900/30 rounded-xl hover:border-neutral-500 transition-colors group"
+                className="flex items-center gap-4 p-4 border border-white/5 bg-neutral-900/30 rounded-xl hover:border-purple-500/40 hover:shadow-[0_0_15px_rgba(168,85,247,0.15)] transition-colors group"
                 id="contact-mail-shortcut"
               >
-                <div className="p-3 border border-neutral-800 bg-neutral-950 rounded-lg group-hover:bg-white group-hover:text-black transition-all">
+                <div className="p-3 border border-neutral-800 bg-neutral-950 text-neutral-400 rounded-lg group-hover:border-purple-500 group-hover:bg-purple-950/30 group-hover:text-purple-300 transition-all">
                   <Mail className="h-5 w-5" />
                 </div>
                 <div>
                   <span className="font-mono text-[9px] text-neutral-500 uppercase tracking-widest block">Direct mail</span>
-                  <span className="font-sans text-sm font-semibold text-white group-hover:text-neutral-300">{portfolioData.contactEmail}</span>
+                  <span className="font-sans text-sm font-semibold text-white group-hover:text-purple-300 transition-colors">{portfolioData.contactEmail}</span>
                 </div>
               </a>
 
               {portfolioData.contactPhone && (
                 <a 
                   href={`tel:${portfolioData.contactPhone.replace(/\s+/g, '')}`}
-                  className="flex items-center gap-4 p-4 border border-white/5 bg-neutral-900/30 rounded-xl hover:border-neutral-500 transition-colors group"
+                  className="flex items-center gap-4 p-4 border border-white/5 bg-neutral-900/30 rounded-xl hover:border-purple-500/40 hover:shadow-[0_0_15px_rgba(168,85,247,0.15)] transition-colors group"
                   id="contact-phone-shortcut"
                 >
-                  <div className="p-3 border border-neutral-800 bg-neutral-950 rounded-lg group-hover:bg-white group-hover:text-black transition-all">
+                  <div className="p-3 border border-neutral-800 bg-neutral-950 text-neutral-400 rounded-lg group-hover:border-purple-500 group-hover:bg-purple-950/30 group-hover:text-purple-300 transition-all">
                     <Phone className="h-5 w-5" />
                   </div>
                   <div>
                     <span className="font-mono text-[9px] text-neutral-500 uppercase tracking-widest block">Mobile Line</span>
-                    <span className="font-sans text-sm font-semibold text-white group-hover:text-neutral-300">{portfolioData.contactPhone}</span>
+                    <span className="font-sans text-sm font-semibold text-white group-hover:text-purple-300 transition-colors">{portfolioData.contactPhone}</span>
                   </div>
                 </a>
               )}
@@ -125,14 +125,14 @@ export const Contact: React.FC = () => {
 
             {/* Social linkages block */}
             <div className="space-y-4 pt-4 border-t border-white/5">
-              <span className="font-mono text-[10px] text-neutral-550 text-neutral-550 uppercase tracking-widest block">Social networks channels_</span>
+              <span className="font-mono text-[10px] text-neutral-550 uppercase tracking-widest block">Social networks channels</span>
               
               <div className="flex gap-3">
                 <a 
                   href={portfolioData.socialLinkedIn}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 bg-neutral-900/40 border border-white/5 hover:border-neutral-500 hover:text-white text-neutral-400 rounded-xl transition-all"
+                  className="p-3 bg-neutral-900/40 border border-white/5 hover:border-purple-500 hover:text-purple-300 hover:bg-purple-950/20 hover:shadow-[0_0_10px_rgba(168,85,247,0.2)] text-neutral-400 rounded-xl transition-all"
                   title="LinkedIn"
                   id="social-linkedin"
                 >
@@ -143,7 +143,7 @@ export const Contact: React.FC = () => {
                   href={portfolioData.socialGitHub}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 bg-neutral-900/40 border border-white/5 hover:border-neutral-500 hover:text-white text-neutral-400 rounded-xl transition-all"
+                  className="p-3 bg-neutral-900/40 border border-white/5 hover:border-purple-500 hover:text-purple-300 hover:bg-purple-950/20 hover:shadow-[0_0_10px_rgba(168,85,247,0.2)] text-neutral-400 rounded-xl transition-all"
                   title="GitHub"
                   id="social-github"
                 >
@@ -154,7 +154,7 @@ export const Contact: React.FC = () => {
                   href={portfolioData.socialInstagram}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 bg-neutral-900/40 border border-white/5 hover:border-neutral-500 hover:text-white text-neutral-400 rounded-xl transition-all"
+                  className="p-3 bg-neutral-900/40 border border-white/5 hover:border-purple-500 hover:text-purple-300 hover:bg-purple-950/20 hover:shadow-[0_0_10px_rgba(168,85,247,0.2)] text-neutral-400 rounded-xl transition-all"
                   title="Instagram"
                   id="social-instagram"
                 >
@@ -221,7 +221,7 @@ export const Contact: React.FC = () => {
                     onChange={handleInputChange}
                     required
                     placeholder="Your Full Name"
-                    className="w-full px-4 py-3 border border-white/5 bg-black/40 text-sm rounded-xl focus:border-neutral-400 focus:outline-none transition-colors duration-300 placeholder:text-neutral-600 font-sans"
+                    className="w-full px-4 py-3 border border-white/5 bg-black/40 text-sm rounded-xl focus:border-purple-500 focus:outline-none transition-colors duration-300 placeholder:text-neutral-600 font-sans"
                   />
                 </div>
 
@@ -235,7 +235,7 @@ export const Contact: React.FC = () => {
                     onChange={handleInputChange}
                     required
                     placeholder="your.email@domain.com"
-                    className="w-full px-4 py-3 border border-white/5 bg-black/40 text-sm rounded-xl focus:border-neutral-400 focus:outline-none transition-colors duration-300 placeholder:text-neutral-600 font-sans"
+                    className="w-full px-4 py-3 border border-white/5 bg-black/40 text-sm rounded-xl focus:border-purple-500 focus:outline-none transition-colors duration-300 placeholder:text-neutral-600 font-sans"
                   />
                 </div>
               </div>
@@ -249,7 +249,7 @@ export const Contact: React.FC = () => {
                   value={formData.subject}
                   onChange={handleInputChange}
                   placeholder="Internship Inbound / General Project Enquiry"
-                  className="w-full px-4 py-3 border border-white/5 bg-black/40 text-sm rounded-xl focus:border-neutral-400 focus:outline-none transition-colors duration-300 placeholder:text-neutral-600 font-sans"
+                  className="w-full px-4 py-3 border border-white/5 bg-black/40 text-sm rounded-xl focus:border-purple-500 focus:outline-none transition-colors duration-300 placeholder:text-neutral-600 font-sans"
                 />
               </div>
 
@@ -263,18 +263,18 @@ export const Contact: React.FC = () => {
                   required
                   rows={4}
                   placeholder="Detail your requirements, project scope, timeline expectation or academic outline here..."
-                  className="w-full px-4 py-3 border border-white/5 bg-black/40 text-sm rounded-xl focus:border-neutral-400 focus:outline-none transition-colors duration-300 placeholder:text-neutral-600 font-sans resize-none leading-relaxed"
+                  className="w-full px-4 py-3 border border-white/5 bg-black/40 text-sm rounded-xl focus:border-purple-500 focus:outline-none transition-colors duration-300 placeholder:text-neutral-600 font-sans resize-none leading-relaxed"
                 />
               </div>
 
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full flex items-center justify-center gap-2 text-xs uppercase tracking-widest font-mono text-black bg-white hover:bg-neutral-200 disabled:opacity-50 transition-colors duration-300 py-4.5 rounded-xl cursor-pointer"
+                className="w-full flex items-center justify-center gap-2 text-xs uppercase tracking-widest font-mono text-white bg-purple-600 hover:bg-purple-700 disabled:opacity-50 border border-purple-500 shadow-[0_0_15px_rgba(168,85,247,0.35)] transition-all duration-300 py-4 rounded-xl cursor-pointer"
                 id="submit-form-btn"
               >
                 {isSubmitting ? (
-                  <span className="animate-pulse">Delivering Envelope_</span>
+                  <span className="animate-pulse">Delivering Envelope</span>
                 ) : (
                   <>
                     <span>Send Message</span>
@@ -308,7 +308,7 @@ export const Contact: React.FC = () => {
 
             <button
               onClick={handleBackToTop}
-              className="p-3 border border-neutral-800 hover:border-neutral-500 text-neutral-400 hover:text-white rounded-full bg-neutral-950 transition-all duration-300 group shadow"
+              className="p-3 border border-neutral-800 hover:border-purple-500 text-neutral-400 hover:text-purple-300 rounded-full bg-neutral-950 hover:bg-purple-950/20 transition-all duration-300 group shadow"
               aria-label="Back to Top"
               id="back-to-top-btn"
             >

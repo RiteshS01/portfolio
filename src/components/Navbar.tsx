@@ -35,6 +35,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCMS }) => {
     { name: 'Skills', href: '#skills' },
     { name: 'Projects', href: '#projects' },
     { name: 'Experience', href: '#experience' },
+    { name: 'Resume', href: '#resume' },
     { name: 'Certifications', href: '#certifications' },
     { name: 'Contact', href: '#contact' }
   ];
@@ -74,10 +75,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCMS }) => {
           onClick={(e) => handleScrollToId(e, 'home')}
           className="group relative flex items-center gap-2"
         >
-          <span className="font-sans font-bold text-lg md:text-xl tracking-tight text-white transition-colors duration-300 group-hover:text-neutral-400">
-            Ritesh Shinde<span className="text-neutral-500">.</span>
+          <span className="font-sans font-bold text-lg md:text-xl tracking-tight text-purple-400 transition-colors duration-300 group-hover:text-fuchsia-300">
+            Ritesh Shinde<span className="text-purple-500">.</span>
           </span>
-          <span className="font-mono text-[9px] px-1.5 py-0.5 rounded border border-white/10 text-neutral-400 select-none group-hover:border-neutral-500 transition-colors uppercase">
+          <span className="font-mono text-[9px] px-1.5 py-0.5 rounded border border-purple-900/40 text-purple-300 select-none group-hover:border-purple-400 transition-colors uppercase">
             ECE
           </span>
         </a>
@@ -89,10 +90,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCMS }) => {
               key={item.name}
               href={item.href}
               onClick={(e) => handleScrollToId(e, item.href.slice(1))}
-              className="relative text-xs uppercase tracking-widest font-mono text-neutral-400 hover:text-white transition-colors duration-300 py-1 group"
+              className="relative text-xs uppercase tracking-widest font-mono text-neutral-400 hover:text-purple-300 transition-colors duration-300 py-1 group"
             >
               {item.name}
-              <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-white transition-all duration-300 group-hover:w-full" />
+              <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-purple-500 transition-all duration-300 group-hover:w-full" />
             </a>
           ))}
         </div>
@@ -102,11 +103,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCMS }) => {
           {isAdminLoggedIn && (
             <button
               onClick={onOpenCMS}
-              className="flex items-center gap-1.5 text-xs font-mono px-3 py-1.5 rounded-full border border-neutral-700 hover:border-neutral-400 bg-neutral-900 text-white transition-all duration-300"
+              className="flex items-center gap-1.5 text-xs font-mono px-3 py-1.5 rounded-full border border-purple-900/40 bg-neutral-900 text-purple-300 transition-all duration-300 hover:border-purple-500"
               title="Open CMS Editor Dashboard"
               id="cms-open-btn"
             >
-              <ShieldCheck className="h-3.5 w-3.5 text-neutral-200" />
+              <ShieldCheck className="h-3.5 w-3.5 text-purple-400" />
               <span className="hidden sm:inline">CMS Panel</span>
             </button>
           )}
@@ -114,7 +115,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCMS }) => {
           <a
             href="#contact"
             onClick={(e) => handleScrollToId(e, 'contact')}
-            className="hidden sm:inline-flex items-center justify-center text-xs uppercase tracking-widest font-mono text-black bg-white hover:bg-neutral-200 transition-colors duration-300 px-5 py-2 px-5 py-2 rounded-full border border-white shadow-md relative group overflow-hidden"
+            className="hidden sm:inline-flex items-center justify-center text-xs uppercase tracking-widest font-mono text-white bg-purple-600 hover:bg-purple-700 transition-colors duration-300 px-5 py-2 rounded-full border border-purple-500 shadow-[0_0_15px_rgba(168,85,247,0.35)] relative group overflow-hidden"
             id="contact-badge-btn"
           >
             <span className="relative z-10">Contact Me</span>
@@ -192,7 +193,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCMS }) => {
                 <a
                   href="#contact"
                   onClick={(e) => handleScrollToId(e, 'contact')}
-                  className="w-full flex items-center justify-center text-center text-xs uppercase tracking-widest font-mono text-black bg-white py-3 rounded-full hover:bg-neutral-200 transition-colors"
+                  className="w-full flex items-center justify-center text-center text-xs uppercase tracking-widest font-mono text-white bg-purple-600 py-3 rounded-full hover:bg-purple-700 transition-colors border border-purple-500 shadow-[0_0_12px_rgba(168,85,247,0.3)]"
                 >
                   Contact Me
                 </a>

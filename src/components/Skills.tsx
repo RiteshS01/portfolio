@@ -39,7 +39,7 @@ export const Skills: React.FC = () => {
         <div className="border-b border-white/5 pb-8 mb-16 flex flex-col md:flex-row md:items-end justify-between gap-4">
           <div>
             <span className="font-mono text-xs uppercase tracking-widest text-neutral-500 block mb-3">02 // CORE CAPABILITIES</span>
-            <h2 className="font-sans font-black text-4xl md:text-5xl lg:text-6xl tracking-tighter text-white uppercase leading-none">
+            <h2 className="font-sans font-black text-4xl md:text-5xl lg:text-6xl tracking-tighter text-purple-400 uppercase leading-none">
               Skills & Tools_
             </h2>
           </div>
@@ -53,7 +53,7 @@ export const Skills: React.FC = () => {
           {portfolioData.skillsList.map((category, index) => (
             <motion.div
               key={category.title}
-              className="group p-6 rounded-2xl border border-white/5 bg-neutral-950/40 backdrop-blur-sm shadow-lg hover:bg-neutral-900/30 hover:border-neutral-500 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between"
+              className="group p-6 rounded-2xl border border-white/5 bg-neutral-950/40 backdrop-blur-sm shadow-lg hover:bg-neutral-900/30 hover:border-purple-500/40 hover:shadow-[0_0_20px_rgba(168,85,247,0.15)] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -71,10 +71,10 @@ export const Skills: React.FC = () => {
                 </div>
 
                 <div className="space-y-1">
-                  <h3 className="font-sans font-black tracking-tight text-lg uppercase text-white group-hover:text-neutral-200">
+                  <h3 className="font-sans font-black tracking-tight text-lg uppercase text-purple-300 group-hover:text-purple-400 transition-colors">
                     {category.title}
                   </h3>
-                  <div className="w-8 h-[1px] bg-neutral-800 group-hover:w-16 transition-all duration-300" />
+                  <div className="w-8 h-[1px] bg-neutral-800 group-hover:bg-purple-500 group-hover:w-16 transition-all duration-300" />
                 </div>
 
                 {/* Skill Nodes list */}
@@ -84,8 +84,8 @@ export const Skills: React.FC = () => {
                       key={subIdx}
                       className="flex items-center gap-2.5 group/node"
                     >
-                      <div className="h-1.5 w-1.5 rounded-full bg-neutral-700 group-hover/node:bg-white group-hover:bg-neutral-400 transition-all duration-300" />
-                      <span className="font-sans text-sm font-light text-neutral-400 group-hover:text-neutral-200 transition-colors">
+                      <div className="h-1.5 w-1.5 rounded-full bg-neutral-700 group-hover/node:bg-purple-400 group-hover:bg-purple-900/50 transition-all duration-300" />
+                      <span className="font-sans text-sm font-light text-neutral-400 group-hover:text-purple-200 transition-colors">
                         {skill}
                       </span>
                     </li>
@@ -102,12 +102,7 @@ export const Skills: React.FC = () => {
           ))}
         </div>
 
-        {/* Technical Subheading note */}
-        <div className="mt-16 text-center border border-white/5 p-6 rounded-2xl bg-neutral-950/20 max-w-2xl mx-auto">
-          <p className="font-mono text-[10px] text-neutral-500 uppercase tracking-widest text-center">
-            Currently learning/pursuing: VHDL/Verilog Layout Design • Advanced RTOS • German B1-B2 Goethe
-          </p>
-        </div>
+
 
       </div>
     </section>

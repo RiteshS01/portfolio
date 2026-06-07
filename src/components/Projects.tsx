@@ -110,7 +110,7 @@ export const Projects: React.FC = () => {
         <div className="border-b border-white/5 pb-8 mb-16 flex flex-col md:flex-row md:items-end justify-between gap-4">
           <div>
             <span className="font-mono text-xs uppercase tracking-widest text-neutral-500 block mb-3">04 // PORTFOLIO PRODUCTS</span>
-            <h2 className="font-sans font-black text-4xl md:text-5xl lg:text-6xl tracking-tighter text-white uppercase leading-none">
+            <h2 className="font-sans font-black text-4xl md:text-5xl lg:text-6xl tracking-tighter text-purple-400 uppercase leading-none">
               Featured Projects_
             </h2>
           </div>
@@ -124,7 +124,7 @@ export const Projects: React.FC = () => {
           {portfolioData.projectsList.map((project, index) => (
             <motion.div
               key={project.id}
-              className="group rounded-3xl border border-white/5 bg-neutral-900/10 backdrop-blur-sm overflow-hidden flex flex-col justify-between hover:border-neutral-500 hover:shadow-2xl hover:shadow-white/[0.02] transition-all duration-500"
+              className="group rounded-3xl border border-white/5 bg-neutral-900/10 backdrop-blur-sm overflow-hidden flex flex-col justify-between hover:border-purple-500/45 hover:shadow-[0_0_25px_rgba(168,85,247,0.15)] transition-all duration-500"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -153,7 +153,7 @@ export const Projects: React.FC = () => {
                     <span className="font-mono text-[10px] uppercase tracking-wider text-neutral-500 block">
                       {project.subtitle}
                     </span>
-                    <h3 className="font-sans font-black text-xl md:text-2xl text-white uppercase tracking-tight group-hover:text-white transition-colors">
+                    <h3 className="font-sans font-black text-xl md:text-2xl text-purple-300 uppercase tracking-tight group-hover:text-purple-400 transition-colors">
                       {project.title}
                     </h3>
                   </div>
@@ -194,7 +194,7 @@ export const Projects: React.FC = () => {
                     href={project.liveUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-wider text-white hover:text-neutral-400 transition-colors"
+                    className="inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-wider text-purple-300 hover:text-purple-400 transition-colors"
                     id={`proj-live-${project.id}`}
                   >
                     Live Demo

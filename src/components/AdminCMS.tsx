@@ -260,7 +260,7 @@ export const AdminCMS: React.FC<AdminCMSProps> = ({ isOpen, onClose }) => {
             {/* Sidebar Drawer Menu for tabs */}
             <div className="w-[180px] border-r border-white/5 bg-neutral-950 p-4 space-y-2 select-none flex flex-col justify-between">
               <div className="space-y-1.5">
-                <span className="font-mono text-[8px] text-neutral-600 uppercase tracking-widest block mb-4">Edit Modules_</span>
+                <span className="font-mono text-[8px] text-neutral-600 uppercase tracking-widest block mb-4">Edit Modules</span>
                 
                 {[
                   { id: 'hero', label: 'HERO MODULE' },
@@ -286,7 +286,7 @@ export const AdminCMS: React.FC<AdminCMSProps> = ({ isOpen, onClose }) => {
 
               {/* Live Info status */}
               <div className="p-3 bg-neutral-900/50 rounded-lg border border-white/5 text-center space-y-1">
-                <span className="font-mono text-[8.5px] text-neutral-500 uppercase tracking-widest block">Status_</span>
+                <span className="font-mono text-[8.5px] text-neutral-500 uppercase tracking-widest block">Status</span>
                 <span className="inline-flex items-center gap-1.5 font-mono text-[9px] text-neutral-400 uppercase font-black">
                   <div className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-ping" />
                   ONLINE
@@ -614,7 +614,7 @@ export const AdminCMS: React.FC<AdminCMSProps> = ({ isOpen, onClose }) => {
 
                               <div className="grid grid-cols-1 sm:grid-cols-4 gap-4">
                                 <div className="space-y-1.5">
-                                  <label className="font-mono text-[8px] text-neutral-400 uppercase tracking-widest block">GitHub URL_</label>
+                                  <label className="font-mono text-[8px] text-neutral-400 uppercase tracking-widest block">GitHub URL</label>
                                   <input
                                     type="text"
                                     value={proj.githubUrl}
@@ -624,7 +624,7 @@ export const AdminCMS: React.FC<AdminCMSProps> = ({ isOpen, onClose }) => {
                                 </div>
 
                                 <div className="space-y-1.5">
-                                  <label className="font-mono text-[8px] text-neutral-400 uppercase tracking-widest block">Live Demo URL_</label>
+                                  <label className="font-mono text-[8px] text-neutral-400 uppercase tracking-widest block">Live Demo URL</label>
                                   <input
                                     type="text"
                                     value={proj.liveUrl || ''}

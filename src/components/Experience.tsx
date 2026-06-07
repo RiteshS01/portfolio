@@ -48,7 +48,7 @@ export const Experience: React.FC = () => {
         <div className="border-b border-white/5 pb-8 mb-16 flex flex-col md:flex-row md:items-end justify-between gap-4">
           <div>
             <span className="font-mono text-xs uppercase tracking-widest text-neutral-500 block mb-3">03 // CHRONOLOGY LOGS</span>
-            <h2 className="font-sans font-black text-4xl md:text-5xl lg:text-6xl tracking-tighter text-white uppercase leading-none">
+            <h2 className="font-sans font-black text-4xl md:text-5xl lg:text-6xl tracking-tighter text-purple-400 uppercase leading-none">
               Experience_
             </h2>
           </div>
@@ -58,7 +58,7 @@ export const Experience: React.FC = () => {
         </div>
 
         {/* Vertical Timeline Track */}
-        <div className="relative border-l border-white/10 ml-4 md:ml-6 pl-8 md:pl-10 space-y-12">
+        <div className="relative border-l border-purple-900/30 ml-4 md:ml-6 pl-8 md:pl-10 space-y-12">
           {portfolioData.experienceList.map((exp, idx) => {
             const isExpanded = expandedId === exp.id;
             
@@ -73,12 +73,12 @@ export const Experience: React.FC = () => {
                 transition={{ duration: 0.6, delay: idx * 0.15 }}
               >
                 {/* Node Dot Marker */}
-                <div className="absolute -left-[41px] md:-left-[51px] top-1.5 p-2 rounded-full border border-neutral-800 bg-neutral-950 text-neutral-400 group-hover:border-neutral-400 group-hover:text-white transition-all duration-300 z-10 shadow shadow-black">
+                <div className="absolute -left-[41px] md:-left-[51px] top-1.5 p-2 rounded-full border border-neutral-800 bg-neutral-950 text-neutral-400 group-hover:border-purple-500/50 group-hover:text-purple-300 group-hover:bg-purple-950/30 transition-all duration-300 z-10 shadow shadow-black">
                   {getExperienceIcon(exp.title)}
                 </div>
 
                 {/* Main Experience Body */}
-                <div className="p-6 rounded-2xl border border-white/5 bg-neutral-900/30 backdrop-blur-sm hover:border-neutral-500 hover:bg-neutral-900/50 transition-all duration-300 shadow-lg select-none space-y-4">
+                <div className="p-6 rounded-2xl border border-white/5 bg-neutral-900/30 backdrop-blur-sm hover:border-purple-500/40 hover:bg-neutral-900/45 hover:shadow-[0_0_20px_rgba(168,85,247,0.15)] transition-all duration-300 shadow-lg select-none space-y-4">
                   
                   {/* Header Row */}
                   <div className="flex items-start justify-between gap-4">
@@ -87,7 +87,7 @@ export const Experience: React.FC = () => {
                         <Calendar className="h-3 w-3 inline" />
                         {exp.period}
                       </span>
-                      <h3 className="font-sans font-black text-xl text-white group-hover:text-neutral-200 uppercase tracking-tight">
+                      <h3 className="font-sans font-black text-xl text-purple-300 group-hover:text-purple-400 transition-colors uppercase tracking-tight">
                         {exp.title}
                       </h3>
                       <p className="font-sans text-sm font-semibold text-neutral-400">
